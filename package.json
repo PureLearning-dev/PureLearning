@@ -1,0 +1,29 @@
+{
+  "name": "pure-learning",
+  "description": "一个学习网站&博客",
+  "version": "2.0.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "docs:build": "vuepress-vite build src",
+    "docs:clean-dev": "vuepress-vite dev src --clean-cache",
+    "docs:dev": "vuepress-vite dev src",
+    "docs:update-package": "pnpm dlx vp-update"
+  },
+  "devDependencies": {
+    "@vuepress/bundler-vite": "2.0.0-rc.27",
+    "sass-embedded": "^1.98.0",
+    "vue": "^3.5.31",
+    "vuepress": "2.0.0-rc.27",
+    "vuepress-theme-hope": "2.0.0-rc.105"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "dependencies": {
+    "katex": "^0.16.45",
+    "vuepress-plugin-katex": "^0.3.0"
+  }
+}
