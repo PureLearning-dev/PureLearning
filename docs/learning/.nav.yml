@@ -1,0 +1,5 @@
+nav:
+  - index.md
+  - 基础与语言核心: python-core.md
+  - 标准库: standard-library.md
+

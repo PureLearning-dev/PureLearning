@@ -1,0 +1,115 @@
+site_name: PythonGuide
+site_description: Python、项目实践与人工智能学习笔记和持续更新日志
+site_author: Pure Learning
+site_url: https://purelearning-dev.github.io/PythonGuide/
+repo_url: https://github.com/PureLearning-dev/PythonGuide
+repo_name: PureLearning-dev/PythonGuide
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; 2026 Pure Learning
+
+theme:
+  name: material
+  language: zh
+  icon:
+    logo: material/language-python
+  font: false
+  palette:
+    - media: "(prefers-color-scheme)"
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-auto
+        name: 跟随系统主题
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换至深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换至浅色模式
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+  - awesome-nav
+  - blog:
+      blog_dir: logs
+      post_dir: "{blog}/posts"
+      post_url_format: "{date}/{slug}"
+      archive: true
+      archive_name: 时间归档
+      archive_date_format: yyyy 年 MM 月
+      archive_url_format: "archive/{date}"
+      categories: true
+      categories_name: 分类
+      categories_url_format: "category/{slug}"
+      pagination: true
+      pagination_per_page: 8
+      pagination_format: "$link_first $link_previous ~2~ $link_next $link_last"
+      draft: false
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      permalink_title: 链接到本节
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra:
+  generator: false
+  status:
+    new: 新增
+    updated: 已更新

@@ -1,0 +1,150 @@
+/* Use the locally installed Maple Mono family for both prose and code. */
+:root {
+  --md-text-font: "Maple Mono NF CN";
+  --md-code-font: "Maple Mono NF CN";
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Maple Mono NF CN", monospace;
+  font-feature-settings: "liga" 1, "calt" 1;
+}
+
+/* Keep Material's official default page background and indigo color system. */
+.journal-hero {
+  position: relative;
+  margin: clamp(2rem, 6vw, 4.5rem) 0 1.5rem;
+  padding: clamp(1.5rem, 4vw, 3rem) 0 clamp(1.8rem, 4vw, 3rem);
+  color: var(--md-default-fg-color);
+  background: transparent;
+}
+
+.journal-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.journal-hero h1 {
+  max-width: 18ch;
+  margin: 0 0 1.15rem;
+  color: var(--md-default-fg-color);
+  font-size: clamp(2.2rem, 5.8vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: -0.035em;
+}
+
+.journal-hero p {
+  max-width: 48rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.md-typeset .journal-hero .md-button {
+  margin-top: 0.5rem;
+  margin-right: 0.45rem;
+  border-radius: 0.15rem;
+}
+
+.md-typeset .journal-hero .md-button--primary {
+  background-color: var(--md-primary-fg-color);
+  border-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+}
+
+.md-typeset .journal-hero .md-button--primary:hover {
+  background-color: var(--md-accent-fg-color);
+  border-color: var(--md-accent-fg-color);
+  color: var(--md-accent-bg-color);
+}
+
+.journal-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 0 2.5rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  background: var(--md-default-bg-color);
+}
+
+.journal-stat-grid > div {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  padding: 0.85rem 1rem;
+  border-right: 0.05rem solid var(--md-default-fg-color--lightest);
+}
+
+.journal-stat-grid > div:last-child {
+  border-right: 0;
+}
+
+.journal-stat-grid strong {
+  color: var(--md-accent-fg-color);
+  font-size: 1.1rem;
+}
+
+.journal-stat-grid span {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.74rem;
+}
+
+.md-typeset .grid.cards > ul > li {
+  background: var(--md-default-bg-color);
+  border-color: var(--md-default-fg-color--lightest);
+  border-radius: 0.2rem;
+  box-shadow: none;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: var(--md-shadow-z2);
+  transform: translateY(-3px);
+}
+
+.status-active {
+  color: #ff9100;
+}
+
+.status-idea {
+  color: var(--md-default-fg-color--light);
+}
+
+.status-done {
+  color: #00c853;
+}
+
+.status-archive {
+  color: var(--md-default-fg-color--lighter);
+}
+
+@media screen and (max-width: 48rem) {
+  .journal-stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .journal-stat-grid > div:nth-child(2) {
+    border-right: 0;
+  }
+
+  .journal-stat-grid > div:nth-child(-n + 2) {
+    border-bottom: 0.05rem solid var(--md-default-fg-color--lightest);
+  }
+
+  .journal-hero {
+    margin-top: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

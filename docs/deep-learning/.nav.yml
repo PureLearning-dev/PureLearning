@@ -1,0 +1,10 @@
+nav:
+  - index.md
+  - 基础理论:
+      - 数学与机器学习基础: fundamentals.md
+  - 神经网络:
+      - 神经网络与深度学习: neural-networks.md
+      - PyTorch 与实验: pytorch-and-experiments.md
+  - AI 应用:
+      - AI 应用与生成式 AI: ai-applications.md
+

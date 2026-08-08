@@ -1,0 +1,13 @@
+ignore: 404.md
+
+nav:
+  - 首页:
+      - index.md
+      - 学习路线图: roadmap.md
+  - Python: learning
+  - AI: deep-learning
+  - 项目实践: projects
+  - 工程实践: engineering
+  - 日志: logs
+  - 关于本站: about
+

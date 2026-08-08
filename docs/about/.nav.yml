@@ -1,0 +1,7 @@
+nav:
+  - index.md
+  - 关于作者: author.md
+  - 更新历史: changelog.md
+  - 内容与写作说明: content-and-writing.md
+  - 技术说明: technical.md
+
