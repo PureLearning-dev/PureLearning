@@ -25,7 +25,6 @@ description: 本站内容分类、文件命名和持续整理方式
 docs/
 ├── .nav.yml                # 只管理顶部栏目
 ├── index.md                # 首页和主要入口
-├── roadmap.md              # 长期学习方向
 ├── learning/                # 稳定的 Python 知识
 │   ├── .nav.yml             # Python 侧边栏
 │   ├── index.md
@@ -53,7 +52,8 @@ docs/
 │   └── posts/               # 一篇日志一个日期文件
 ├── about/                   # 作者、站点规则和更新历史
 │   ├── .nav.yml
-│   └── index.md
+│   ├── index.md
+│   └── roadmap.md           # 长期学习方向
 └── assets/                  # 图片、附件、自定义样式
 ```
 
