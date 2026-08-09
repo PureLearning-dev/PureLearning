@@ -1,17 +1,18 @@
-site_name: PythonGuide
+site_name: PureLearning
 site_description: Python、项目实践与人工智能学习笔记和持续更新日志
 site_author: Pure Learning
 site_url: https://purelearning-dev.github.io/PythonGuide/
 repo_url: https://github.com/PureLearning-dev/PythonGuide
 repo_name: PureLearning-dev/PythonGuide
 edit_uri: edit/main/docs/
-copyright: Copyright &copy; 2026 Pure Learning
+copyright: Copyright &copy; 2026 - 2026 Pure Learning
 
 theme:
   name: material
+  custom_dir: overrides
   language: zh
-  icon:
-    logo: material/language-python
+  logo: assets/images/cipher-wheel.svg
+  favicon: assets/images/cipher-wheel.svg
   font: false
   palette:
     - media: "(prefers-color-scheme)"
@@ -56,10 +57,14 @@ plugins:
         - zh
         - en
   - awesome-nav
+  - meta
   - blog:
-      blog_dir: logs
+      blog_dir: blog
       post_dir: "{blog}/posts"
       post_url_format: "{date}/{slug}"
+      authors: true
+      authors_file: "{blog}/.authors.yml"
+      post_readtime: true
       archive: true
       archive_name: 时间归档
       archive_date_format: yyyy 年 MM 月
@@ -71,6 +76,10 @@ plugins:
       pagination_per_page: 8
       pagination_format: "$link_first $link_previous ~2~ $link_next $link_last"
       draft: false
+  - tags
+
+hooks:
+  - hooks/blog_metadata.py
 
 markdown_extensions:
   - abbr
@@ -105,6 +114,8 @@ markdown_extensions:
 
 extra_css:
   - assets/stylesheets/extra.css
+  - assets/stylesheets/home-map.css
+  - assets/stylesheets/blog.css
 
 extra:
   generator: false

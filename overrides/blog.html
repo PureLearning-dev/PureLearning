@@ -1,0 +1,25 @@
+{% extends "main.html" %}
+
+{% block container %}
+  <div class="md-content" data-md-component="content">
+    <div class="md-content__inner kb-blog-index">
+      <header class="md-typeset kb-blog-index__intro">
+        {{ page.content }}
+      </header>
+
+      <section class="kb-blog-index__posts" aria-label="博客文章">
+        {% for post in posts %}
+          <div class="kb-blog-index__entry{% if loop.first %} kb-blog-index__entry--lead{% endif %}">
+            {% include "partials/post.html" %}
+          </div>
+        {% endfor %}
+      </section>
+
+      {% if pagination %}
+        {% block pagination %}
+          {% include "partials/pagination.html" %}
+        {% endblock %}
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

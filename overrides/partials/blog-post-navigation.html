@@ -1,0 +1,37 @@
+{% if page.previous_page or page.next_page %}
+  <nav class="kb-blog-post-nav" aria-label="博客文章切换">
+    {% if page.previous_page %}
+      <a
+        class="kb-blog-post-nav__link kb-blog-post-nav__link--previous"
+        href="{{ page.previous_page.url | url }}"
+        rel="prev"
+        aria-label="上一篇：{{ page.previous_page.title | e }}"
+      >
+        <span class="kb-blog-post-nav__icon" aria-hidden="true">
+          {% include ".icons/material/arrow-left.svg" %}
+        </span>
+        <span class="kb-blog-post-nav__copy">
+          <span class="kb-blog-post-nav__label">上一篇</span>
+          <strong class="kb-blog-post-nav__title">{{ page.previous_page.title }}</strong>
+        </span>
+      </a>
+    {% endif %}
+
+    {% if page.next_page %}
+      <a
+        class="kb-blog-post-nav__link kb-blog-post-nav__link--next"
+        href="{{ page.next_page.url | url }}"
+        rel="next"
+        aria-label="下一篇：{{ page.next_page.title | e }}"
+      >
+        <span class="kb-blog-post-nav__copy">
+          <span class="kb-blog-post-nav__label">下一篇</span>
+          <strong class="kb-blog-post-nav__title">{{ page.next_page.title }}</strong>
+        </span>
+        <span class="kb-blog-post-nav__icon" aria-hidden="true">
+          {% include ".icons/material/arrow-right.svg" %}
+        </span>
+      </a>
+    {% endif %}
+  </nav>
+{% endif %}

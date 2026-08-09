@@ -2,7 +2,10 @@
 date: 2026-08-08
 categories:
   - 学习思考
+tags:
   - Python
+  - 学习方法
+  - 知识管理
 ---
 
 # 为什么建立这份 Python 学习记录

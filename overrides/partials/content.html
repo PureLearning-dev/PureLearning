@@ -1,0 +1,94 @@
+{# Keep Material's native content pipeline and append blog-only additions. #}
+{% set is_blog_post = page.meta.template == "blog-post.html" %}
+{% if not is_blog_post %}
+  {% include "partials/tags.html" %}
+{% endif %}
+{% include "partials/actions.html" %}
+
+{% if is_blog_post %}
+  <nav class="kb-blog-post-back" aria-label="博客导航">
+    <a class="kb-blog-post-back__link" href="{{ page.parent.url | url }}">
+      <span class="kb-blog-post-back__icon" aria-hidden="true">
+        {% include ".icons/material/arrow-left.svg" %}
+      </span>
+      <span>返回博客</span>
+    </a>
+  </nav>
+{% endif %}
+
+{% if is_blog_post %}
+  {% set post_meta %}
+    <div class="kb-blog-post-meta" aria-label="文章元数据">
+      {% if page.authors %}
+        <span class="kb-blog-post-meta__item kb-blog-post-meta__authors">
+          {% for author in page.authors %}
+            {% if author.url %}
+              <a class="kb-blog-post-meta__author" href="{{ author.url | url }}" title="{{ author.description }}">
+                <img class="kb-blog-post-meta__avatar" src="{{ author.avatar | url }}" alt="">
+                <span>{{ author.name }}</span>
+              </a>
+            {% else %}
+              <span class="kb-blog-post-meta__author" title="{{ author.description }}">
+                <img class="kb-blog-post-meta__avatar" src="{{ author.avatar | url }}" alt="">
+                <span>{{ author.name }}</span>
+              </span>
+            {% endif %}
+            {%- if loop.revindex > 1 %}<span aria-hidden="true">、</span>{% endif -%}
+          {% endfor %}
+        </span>
+      {% endif %}
+      <time
+        class="kb-blog-post-meta__item"
+        datetime="{{ page.config.date.created }}"
+        aria-label="发布于 {{ page.config.date.created | date }}"
+        title="发布于 {{ page.config.date.created | date }}"
+      >
+        {{- page.config.date.created.strftime("%B %d, %Y") | replace(" 0", " ") -}}
+        {% if page.categories %}
+          <span aria-hidden="true"> in </span>
+          {% for category in page.categories %}
+            <a class="kb-blog-post-meta__link" href="{{ category.url | url }}">{{ category.title }}</a>
+            {%- if loop.revindex > 1 %}, {% endif -%}
+          {% endfor %}
+        {% endif %}
+      </time>
+      {% if page.config.date.updated %}
+        <time
+          class="kb-blog-post-meta__item"
+          datetime="{{ page.config.date.updated }}"
+          aria-label="更新于 {{ page.config.date.updated | date }}"
+          title="更新于 {{ page.config.date.updated | date }}"
+        >
+          更新 {{ page.config.date.updated.strftime("%Y-%m-%d") }}
+        </time>
+      {% endif %}
+      {% if page.config.readtime %}
+        {% set time = page.config.readtime %}
+        <span class="kb-blog-post-meta__item" aria-label="预计阅读时间 {{ time }} 分钟" title="预计阅读时间">
+          {{ time }} min read
+        </span>
+      {% endif %}
+      {% if page.meta.word_count %}
+        <span class="kb-blog-post-meta__item" aria-label="正文约 {{ page.meta.word_count }} 字" title="正文字数">
+          {{ page.meta.word_count }} words
+        </span>
+      {% endif %}
+    </div>
+  {% endset %}
+{% endif %}
+
+{% if "\u003ch1" not in page.content %}
+  <h1>{{ page.title | d(config.site_name, true)}}</h1>
+  {% if is_blog_post %}{{ post_meta }}{% endif %}
+  {{ page.content }}
+{% elif is_blog_post %}
+  {{ page.content | replace('</h1>', '</h1>' ~ post_meta, 1) }}
+{% else %}
+  {{ page.content }}
+{% endif %}
+{% if is_blog_post %}
+  {% include "partials/blog-post-navigation.html" %}
+{% endif %}
+{% include "partials/source-file.html" %}
+{% include "partials/feedback.html" %}
+{% include "partials/comments.html" %}
