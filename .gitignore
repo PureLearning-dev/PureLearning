@@ -2,6 +2,7 @@
 site/
 .cache/
 .firecrawl/
+.hallmark/
 .idea/
 .pytest_cache/
 .mypy_cache/
