@@ -1,6 +1,9 @@
 ---
 title: Python 总览
 description: 从语言核心到工程实践的分层学习地图
+tags:
+  - Python
+  - 学习路径
 ---
 
 # Python 总览

@@ -2,9 +2,11 @@ ignore: 404.md
 
 nav:
   - 首页: index.md
-  - Python: learning
-  - AI: deep-learning
-  - 项目实践: projects
+  - Python: python
+  - AI: ai
+  - 项目档案: projects
   - 工程实践: engineering
-  - 日志: logs
+  - 博客:
+      - 博客文章: blog
+      - 学习与项目日志: logs
   - 关于本站: about
