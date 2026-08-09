@@ -1,0 +1,17 @@
+Font asset notice
+
+Excalifont
+- Source: https://github.com/excalidraw/excalidraw/tree/master/packages/excalidraw/fonts/Excalifont
+- The Latin webfont subset is distributed unchanged.
+- Copyright (c) 2024 by Excalidraw. All rights reserved.
+- Excalifont modifications by Jan Filipek / DizajnDesign.
+
+Xiaolai
+- Source: https://github.com/lxgw/kose-font/releases/tag/v3.126
+- The local webfont is a WOFF2 subset containing the characters used by the
+  homepage knowledge map.
+- Copyright 2020-2024 LXGW.
+- Copyright 2014 Nozomi Seto.
+
+Both font assets are distributed under the SIL Open Font License 1.1. The
+complete license text is included in OFL-1.1.txt.
