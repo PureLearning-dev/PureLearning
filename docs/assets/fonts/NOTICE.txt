@@ -1,5 +1,11 @@
 Font asset notice
 
+Maple Mono NF CN
+- Source: https://github.com/subframe7536/maple-font/releases/tag/v7.9
+- The Regular face is self-hosted as a WOFF2 webfont with complete Unicode
+  coverage; font hinting and unused metadata were removed for web delivery.
+- Copyright 2022 The Maple Mono Project Authors.
+
 Excalifont
 - Source: https://github.com/excalidraw/excalidraw/tree/master/packages/excalidraw/fonts/Excalifont
 - The Latin webfont subset is distributed unchanged.
@@ -13,5 +19,5 @@ Xiaolai
 - Copyright 2020-2024 LXGW.
 - Copyright 2014 Nozomi Seto.
 
-Both font assets are distributed under the SIL Open Font License 1.1. The
+All font assets are distributed under the SIL Open Font License 1.1. The
 complete license text is included in OFL-1.1.txt.

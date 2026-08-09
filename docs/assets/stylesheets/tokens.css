@@ -1,5 +1,16 @@
 /* Shared visual tokens for light and dark themes. */
 @font-face {
+  font-family: "Maple Mono NF CN";
+  src:
+    local("Maple Mono NF CN Regular"),
+    local("Maple Mono NF CN"),
+    url("../fonts/maple-mono-nf-cn-regular.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
   font-family: "Excalifont";
   src: url("../fonts/excalifont-latin.woff2") format("woff2");
   font-display: swap;
