@@ -5,118 +5,255 @@ hide:
   - toc
 ---
 
-<div class="journal-hero" markdown>
+<div class="kb-home" markdown>
 
-# 从 Python 基础，到能运行的真实项目
+<header class="kb-home-hero" markdown>
 
-这里以 Python 为主线，记录语言知识、工程方法和完整项目过程，并延伸到机器学习、深度学习与生成式 AI。你可以跟随专题系统学习，也可以从一个真实问题或项目直接开始。
+# 让知识回到代码与真实项目
 
-[学习 Python](learning/index.md){ .md-button .md-button--primary }
-[查看项目实践](projects/index.md){ .md-button }
+这里是一套持续生长的个人技术知识库。它以 Python 为主线，连接语言学习、工程实践、真实项目与 AI 探索，也保留问题如何出现、方案为何选择，以及实践之后发生的认识变化。
 
-</div>
+<div class="kb-home-actions" markdown>
 
-<div class="journal-stat-grid">
-  <div><strong>PY</strong><span>Python 主线</span></div>
-  <div><strong>BUILD</strong><span>真实项目</span></div>
-  <div><strong>AI</strong><span>智能应用</span></div>
-  <div><strong>LOG</strong><span>持续更新</span></div>
-</div>
-
-## 你可以在这里学到什么
-
-<div class="grid cards" markdown>
-
--   :material-language-python:{ .lg .middle } **掌握 Python**
-
-    ---
-
-    理解数据类型、函数、类、迭代器、异常等语言核心，并熟悉文件、时间、集合、并发等标准库能力。
-
-    [进入 Python 专题 :octicons-arrow-right-24:](learning/index.md)
-
--   :material-hammer-wrench:{ .lg .middle } **使用 Python 创建项目**
-
-    ---
-
-    从问题和目标出发，完成方案设计、代码实现、测试、版本迭代、问题排查和项目复盘。
-
-    [浏览项目实践 :octicons-arrow-right-24:](projects/index.md)
-
--   :material-cog-outline:{ .lg .middle } **建立工程能力**
-
-    ---
-
-    学习类型、测试、日志、依赖管理、Git、Linux、Docker、部署和性能分析，让代码可以长期维护和交付。
-
-    [查看工程实践 :octicons-arrow-right-24:](engineering/index.md)
-
--   :material-brain:{ .lg .middle } **用 Python 探索 AI**
-
-    ---
-
-    从机器学习和神经网络出发，学习 PyTorch、计算机视觉、自然语言处理、生成式 AI 与智能应用。
-
-    [进入 AI 学习路径 :octicons-arrow-right-24:](deep-learning/index.md)
+[开始学习](learning/index.md){ .kb-home-action .kb-home-action--primary }
+[浏览项目与经验](projects/index.md){ .kb-home-action .kb-home-action--secondary }
 
 </div>
 
-## 从知识到项目的两条路径
+<div class="kb-home-status" aria-label="网站当前状态">
+  <p><span>当前主线</span>Python 工程能力与 AI 应用</p>
+  <p><span>内容状态</span>持续整理、验证与修正</p>
+</div>
 
-Python 是两条路径共同的基础。你既可以先建立工程能力、完成通用软件项目，也可以继续学习机器学习和神经网络，再把模型放进实际应用。
+</header>
 
-```mermaid
-flowchart LR
-    Python[Python 基础] --> Engineering[工程能力]
-    Engineering --> PythonProject[Python 项目]
+<section class="kb-home-section" markdown>
 
-    Python --> ML[数学与机器学习]
-    ML --> AI[深度学习与生成式 AI]
-    AI --> AIProject[AI 项目]
+<div class="kb-home-section-head" markdown>
 
-    PythonProject -. 工具与数据 .-> AIProject
-```
+## 网站内容地图
 
-!!! info "这里不只记录最终答案"
+<p>长期知识按主题整理，项目保存完整实践过程；日志则沿着时间记录学习现场，并把变化重新连接到这些内容。</p>
 
-    除了整理后的知识，网站也会保留项目为什么这样设计、遇到过什么问题、如何验证修复，以及下一次会怎样改进。目标是让每篇内容都能回到实际代码和真实场景。
+</div>
 
-## 按你的当前目标开始
+<div class="kb-home-map" markdown>
 
-=== "系统学习 Python"
+<article class="kb-home-map-item" markdown>
+
+<span class="kb-home-map-index">01</span>
+
+### Python 知识
+
+当你需要理解 Python 的表达方式、标准库能力与常见使用边界时，从这里建立稳定的语言基础，而不只是记住语法形式。
+
+[进入 Python →](learning/index.md){ .kb-home-text-link }
+
+</article>
+
+<article class="kb-home-map-item" markdown>
+
+<span class="kb-home-map-index">02</span>
+
+### 工程实践
+
+当代码开始变长、需要协作或交付时，在这里查找测试、类型、日志、依赖、部署与维护方法，让实现能够被验证和长期演进。
+
+[查看工程实践 →](engineering/index.md){ .kb-home-text-link }
+
+</article>
+
+<article class="kb-home-map-item" markdown>
+
+<span class="kb-home-map-index">03</span>
+
+### 项目档案
+
+当你想知道一个项目如何从目标走到结果时，这里保存设计、技术决策、故障排查、里程碑与复盘，而不只展示最终成品。
+
+[浏览项目档案 →](projects/index.md){ .kb-home-text-link }
+
+</article>
+
+<article class="kb-home-map-item" markdown>
+
+<span class="kb-home-map-index">04</span>
+
+### AI 探索
+
+当你希望用 Python 理解和创建 AI 应用时，从机器学习、神经网络与 PyTorch 出发，通过实验连接生成式 AI 和真实应用场景。
+
+[进入 AI 路径 →](deep-learning/index.md){ .kb-home-text-link }
+
+</article>
+
+</div>
+
+<aside class="kb-home-timeline" markdown>
+
+**学习日志是一条贯穿这些主题的时间线。** 它保存学习进展、实验现场、项目变化与认识修正，再把值得长期保留的内容提炼回专题、项目或代码速查。[沿时间浏览日志 →](logs/index.md){ .kb-home-text-link }
+
+</aside>
+
+</section>
+
+<section class="kb-home-section kb-home-formation" markdown>
+
+<div class="kb-home-section-head" markdown>
+
+## 知识如何形成
+
+<p>这里不只收集资料。知识从真实问题、代码实验与项目实践中形成，经过复查后仍然允许被修正。</p>
+
+</div>
+
+<ol class="kb-home-process">
+  <li><span>01</span><strong>问题与日志</strong><small>捕获现场与上下文</small></li>
+  <li><span>02</span><strong>实际验证</strong><small>用代码、实验或项目检验</small></li>
+  <li><span>03</span><strong>专题与经验</strong><small>提炼可复用的认识</small></li>
+  <li><span>04</span><strong>项目应用</strong><small>回到真实目标与约束</small></li>
+  <li><span>05</span><strong>复查修正</strong><small>更新旧结论与关联</small></li>
+</ol>
+
+<p class="kb-home-formation-note">日志捕获现场，代码负责验证，专题沉淀长期认识，项目检验它是否真正有用。新的问题会再次进入这条路径。</p>
+
+</section>
+
+<section class="kb-home-section kb-home-goals" markdown>
+
+<div class="kb-home-section-head" markdown>
+
+## 按目标开始
+
+<p>不必从首页顺序阅读。选择你眼下要解决的问题，再沿已有页面继续深入。</p>
+
+</div>
+
+=== "学 Python"
 
     1. 从[基础与语言核心](learning/python-core.md)理解 Python 的表达方式。
-    2. 根据实际任务查阅[标准库](learning/standard-library.md)。
+    2. 根据真实任务查阅[标准库](learning/standard-library.md)。
     3. 进入[工程实践](engineering/index.md)，让代码可测试、可维护。
-    4. 选择一个[项目](projects/index.md)把知识真正用起来。
+    4. 选择一个[项目](projects/index.md)验证所学内容。
 
-=== "正在创建项目"
+=== "建项目"
 
-    1. 使用[项目记录模板](projects/project-template.md)明确目标和范围。
-    2. 在项目档案中持续记录决策、里程碑和问题排查。
-    3. 从[代码速查](engineering/snippets.md)寻找已经验证过的常用模式。
-    4. 完成阶段目标后写一份复盘，把经验整理回专题。
+    1. 使用[项目记录模板](projects/project-template.md)明确问题、目标与范围。
+    2. 在[项目档案](projects/index.md)中记录方案、决策和里程碑。
+    3. 从[代码速查](engineering/snippets.md)复用已经验证的模式。
+    4. 完成阶段目标后写下故障、结果与复盘。
 
-=== "使用 Python 学习 AI"
+=== "提升工程"
 
-    1. 先确认需要的 Python、数据处理和调试能力。
+    1. 先查看[工程能力地图](engineering/index.md)确定当前短板。
+    2. 用[Python 工程化](engineering/python-engineering.md)补齐类型、测试与日志。
+    3. 在项目中验证依赖、交付和维护方式。
+    4. 把稳定做法整理到[代码速查](engineering/snippets.md)。
+
+=== "做 AI 应用"
+
+    1. 确认 Python、数据处理和调试能力足以支撑实验。
     2. 学习[数学与机器学习基础](deep-learning/fundamentals.md)。
-    3. 理解[神经网络与深度学习](deep-learning/neural-networks.md)。
-    4. 使用[PyTorch 与实验方法](deep-learning/pytorch-and-experiments.md)验证理解，再探索[AI 应用](deep-learning/ai-applications.md)。
+    3. 通过[神经网络](deep-learning/neural-networks.md)与[PyTorch 实验](deep-learning/pytorch-and-experiments.md)验证理解。
+    4. 再进入[AI 应用](deep-learning/ai-applications.md)，连接模型与实际场景。
 
-## 网站内容如何持续更新
+=== "查经验"
 
-| 内容类型 | 你会看到的内容 | 更新方式 |
-| --- | --- | --- |
-| 专题笔记 | Python、工程实践和 AI 的稳定知识 | 理解并验证后持续修订 |
-| 项目档案 | 目标、方案、代码、里程碑、故障和复盘 | 跟随项目版本演进 |
-| 代码速查 | 可以直接复用的 Python 代码和命令 | 实际运行验证后收录 |
-| 学习日志 | 学习进展、实验结果、项目更新和阅读记录 | 按日期持续追加 |
+    1. 从站内搜索输入现象、库名、异常或任务关键词。
+    2. 在[代码速查](engineering/snippets.md)寻找短小、已验证的实现。
+    3. 在[工程实践](engineering/index.md)理解做法适用的条件。
+    4. 到[日志](logs/index.md)和[项目档案](projects/index.md)查看问题发生时的完整上下文。
 
-## 最近更新与推荐阅读
+</section>
 
-- [为什么建立这份 Python 学习记录](logs/posts/2026-08-08-site-initialized.md)
+<section class="kb-home-section kb-home-experience" markdown>
+
+<div class="kb-home-experience-intro" markdown>
+
+## 知识之外，也记录经验
+
+结论离开上下文后往往很难复用。因此，这里会把“为什么”与“怎么确认”一并保存：既能看到最终做法，也能回到它形成时的限制、尝试与判断。
+
+<div class="kb-home-inline-links" markdown>
+
+[项目实践 →](projects/index.md){ .kb-home-text-link }
+[工程实践 →](engineering/index.md){ .kb-home-text-link }
+[学习日志 →](logs/index.md){ .kb-home-text-link }
+
+</div>
+
+</div>
+
+<dl class="kb-home-experience-list">
+  <div><dt>技术选择</dt><dd>记录候选方案、约束条件，以及最终选择某种方法的理由。</dd></div>
+  <div><dt>故障排查</dt><dd>保留现象、假设、验证过程、根因与修复，避免只留下答案。</dd></div>
+  <div><dt>项目变化</dt><dd>说明里程碑、版本调整与目标变化对实现产生的影响。</dd></div>
+  <div><dt>失败实验</dt><dd>保存没有奏效的尝试及其结论，让失败也能减少下一次试错。</dd></div>
+  <div><dt>复盘修正</dt><dd>重新审视阶段判断，并解释旧结论后来为什么发生改变。</dd></div>
+</dl>
+
+</section>
+
+<section class="kb-home-section" markdown>
+
+<div class="kb-home-section-head" markdown>
+
+## 当前进展
+
+<p>以下内容来自网站现有结构与项目记录，不使用虚构的完成率或学习统计。</p>
+
+</div>
+
+<ul class="kb-home-progress">
+  <li><strong>Python 学习手册</strong><span>内容框架搭建中</span></li>
+  <li><strong>Python 语言核心</strong><span>持续整理</span></li>
+  <li><strong>工程实践与代码速查</strong><span>逐步补充</span></li>
+  <li><strong>AI 学习路径</strong><span>从基础理论向实验和应用推进</span></li>
+</ul>
+
+</section>
+
+<section class="kb-home-section kb-home-reading" markdown>
+
+<div class="kb-home-reading-column" markdown>
+
+## 最近更新
+
+按时间变化的学习现场、项目记录与网站调整。
+
+- `2026-08-08` [为什么建立这份 Python 学习记录](logs/posts/2026-08-08-site-initialized.md)
+- `2026-08-08` [Python 学习手册：内容框架搭建](projects/index.md)
+- `2026-08-08` [网站结构与导航调整](about/changelog.md)
+
+</div>
+
+<div class="kb-home-reading-column" markdown>
+
+## 推荐阅读
+
+较稳定的内容入口和网站使用说明。
+
 - [Python 学习总览](learning/index.md)
-- [AI 学习路径](deep-learning/index.md)
 - [项目记录模板](projects/project-template.md)
-- [关于这个网站](about/index.md)
+- [内容如何组织与写作](about/content-and-writing.md)
+- [网站路线图](about/roadmap.md)
+
+</div>
+
+</section>
+
+<footer class="kb-home-principles" markdown>
+
+## 内容原则
+
+<ul>
+  <li>先理解，再整理</li>
+  <li>先验证，再总结</li>
+  <li>保留问题和决策上下文</li>
+  <li>允许旧结论被修正</li>
+  <li>让知识最终回到真实项目</li>
+</ul>
+
+</footer>
+
+</div>

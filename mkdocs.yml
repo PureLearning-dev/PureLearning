@@ -38,8 +38,6 @@ theme:
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.tabs
-    - navigation.sections
-    - navigation.expand
     - navigation.indexes
     - navigation.top
     - navigation.tracking
@@ -110,6 +108,3 @@ extra_css:
 
 extra:
   generator: false
-  status:
-    new: 新增
-    updated: 已更新

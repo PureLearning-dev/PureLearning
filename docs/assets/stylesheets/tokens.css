@@ -1,0 +1,71 @@
+/* Hallmark · genre: editorial · macrostructure: Long Document · theme: Editorial · enrichment: none · anchor hue: indigo 275 */
+:root {
+  --font-display: "Maple Mono NF CN", ui-monospace, monospace;
+  --font-body: "Maple Mono NF CN", ui-monospace, monospace;
+  --font-code: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas,
+    "Liberation Mono", monospace;
+
+  --color-paper: oklch(99.5% 0.005 275);
+  --color-surface: oklch(97.5% 0.008 275);
+  --color-surface-strong: oklch(94.5% 0.014 275);
+  --color-ink: oklch(23% 0.02 275);
+  --color-muted: oklch(49% 0.025 275);
+  --color-faint: oklch(52% 0.02 275);
+  --color-rule: oklch(89% 0.014 275);
+  --color-rule-strong: oklch(76% 0.035 275);
+  --color-accent: oklch(49% 0.19 276);
+  --color-accent-strong: oklch(40% 0.2 276);
+  --color-accent-ink: oklch(98% 0.006 276);
+  --color-accent-soft: oklch(95% 0.026 276);
+  --color-focus: oklch(58% 0.22 276);
+  --color-status-active: oklch(68% 0.17 63);
+  --color-status-done: oklch(62% 0.15 145);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  --text-xs: 0.68rem;
+  --text-sm: 0.78rem;
+  --text-base: 0.86rem;
+  --text-lg: clamp(0.98rem, 1vw + 0.72rem, 1.16rem);
+  --text-section: clamp(1.5rem, 3vw, 2.25rem);
+  --text-display: clamp(2.35rem, 7vw, 4.1rem);
+
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.25rem;
+  --rule-thin: 0.05rem;
+  --underline-offset: 0.1rem;
+  --duration-instant: 100ms;
+  --duration-short: 180ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+[data-md-color-scheme="slate"] {
+  --color-paper: oklch(20% 0.016 270);
+  --color-surface: oklch(23.5% 0.019 270);
+  --color-surface-strong: oklch(27% 0.023 270);
+  --color-ink: oklch(93% 0.008 275);
+  --color-muted: oklch(72% 0.018 275);
+  --color-faint: oklch(61% 0.02 275);
+  --color-rule: oklch(33% 0.025 270);
+  --color-rule-strong: oklch(47% 0.04 270);
+  --color-accent: oklch(72% 0.14 276);
+  --color-accent-strong: oklch(79% 0.11 276);
+  --color-accent-ink: oklch(22% 0.02 276);
+  --color-accent-soft: oklch(28% 0.045 276);
+  --color-focus: oklch(76% 0.16 276);
+  --color-status-active: oklch(78% 0.14 70);
+  --color-status-done: oklch(75% 0.13 145);
+}

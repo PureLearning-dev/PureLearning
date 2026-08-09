@@ -1,6 +1,5 @@
 ---
 title: AI 应用与生成式 AI
-status: new
 ---
 
 # AI 应用与生成式 AI
@@ -41,4 +40,3 @@ flowchart LR
     Evaluation --> Product[应用与交付]
     Product -. 反馈 .-> Data
 ```
-
