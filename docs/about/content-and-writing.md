@@ -12,6 +12,7 @@ description: 本站内容分类、文件命名和持续整理方式
 | 你的内容 | 放置位置 | 典型文件 |
 | --- | --- | --- |
 | Python 概念、原理、长期有效的方法 | `docs/python/` | `python-core.md` |
+| 算法、数据结构、操作系统、网络和数据库基础 | `docs/fundamentals/` | `algorithms/index.md` |
 | 机器学习、深度学习和 AI 应用专题 | `docs/ai/` | `neural-networks.md` |
 | 某个项目的目标、架构、决策和复盘 | `docs/projects/` | `my-project.md` |
 | 测试、打包、部署、工具和代码速查 | `docs/engineering/` | `python-engineering.md`、`snippets.md` |
@@ -31,6 +32,14 @@ docs/
 │   ├── index.md
 │   ├── python-core.md
 │   └── standard-library.md
+├── fundamentals/            # 算法与计算机基础
+│   ├── .nav.yml
+│   ├── index.md
+│   ├── algorithms/          # 数据结构、算法模式与题目记录
+│   ├── computer-systems/    # 数据表示、程序执行与硬件基础
+│   ├── operating-systems/   # 进程、内存、文件与并发
+│   ├── networks/            # 网络协议、通信与排查
+│   └── databases/           # 数据模型、索引与事务
 ├── ai/                      # 机器学习、深度学习与 AI 应用
 │   ├── .nav.yml             # AI 侧边栏
 │   ├── index.md
@@ -64,7 +73,7 @@ docs/
 
 ## 导航管理
 
-根目录的 `.nav.yml` 只定义首页、Python、AI、项目实践等顶部栏目。每个内容目录中的 `.nav.yml` 只负责自己的侧边栏顺序和分组。
+根目录的 `.nav.yml` 只定义首页、Python、算法与基础、AI、项目实践等顶部栏目。每个内容目录中的 `.nav.yml` 只负责自己的侧边栏顺序和分组。
 
 新增普通页面后，可以在目录的 `.nav.yml` 中明确放置，也可以使用 `"*"` 通配符自动收录其余页面。这样内容增长时不需要不断扩充根目录的 `mkdocs.yml`。
 
