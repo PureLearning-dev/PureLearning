@@ -13,7 +13,7 @@ hide:
 
 # 从知识学习，走向真实实践
 
-这里是一套持续生长的个人技术知识库。以 Python 为主线，连接语言学习、工程实践、真实项目与 AI 探索；既整理结论，也保留问题、验证、选择与认识变化。
+To be what you want to be !
 
 <div class="kb-home-actions" markdown>
 
