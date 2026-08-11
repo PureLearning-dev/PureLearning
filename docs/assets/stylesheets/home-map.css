@@ -4,6 +4,10 @@
   --node-surface: var(--color-node-neutral-paper);
   --node-border: var(--color-node-neutral-border);
   --node-mark-surface: var(--color-accent-soft);
+  --node-line-x: -0.06rem;
+  --node-line-y: 0.05rem;
+  --node-line-rotate: -0.18deg;
+  --node-line-radius: 0.52rem 0.78rem 0.48rem 0.7rem / 0.7rem 0.5rem 0.76rem 0.46rem;
   position: relative;
   display: grid;
   grid-template-areas:
@@ -15,7 +19,20 @@
   border-color: var(--node-border);
   color: var(--color-ink);
   background: var(--node-surface);
-  box-shadow: var(--space-1) var(--space-1) 0 var(--color-node-shadow);
+  box-shadow:
+    0.1rem 0.13rem 0 var(--color-node-shadow),
+    0.18rem 0.22rem 0 -0.08rem var(--color-node-shadow);
+}
+
+.kb-home-node::before {
+  position: absolute;
+  inset: -0.1rem -0.08rem -0.06rem -0.11rem;
+  border: 0.055rem solid var(--node-border);
+  border-radius: var(--node-line-radius);
+  content: "";
+  opacity: 0.48;
+  pointer-events: none;
+  transform: translate(var(--node-line-x), var(--node-line-y)) rotate(var(--node-line-rotate));
 }
 
 .kb-home-node--python,
@@ -26,6 +43,7 @@
 }
 
 .kb-home-node--engineering,
+.kb-home-node--fundamentals,
 .kb-home-node--blog {
   --node-surface: var(--color-node-warm-paper);
   --node-border: var(--color-node-warm-border);
@@ -33,18 +51,42 @@
 }
 
 .kb-home-node--python {
+  --node-line-x: 0.06rem;
+  --node-line-y: -0.04rem;
+  --node-line-rotate: 0.22deg;
+  --node-line-radius: 0.46rem 0.84rem 0.55rem 0.68rem / 0.72rem 0.46rem 0.8rem 0.5rem;
   --node-icon: url("../icons/koboyo/cartoon-python-file.svg");
 }
 
+.kb-home-node--fundamentals {
+  --node-line-x: -0.08rem;
+  --node-line-y: 0.03rem;
+  --node-line-rotate: -0.28deg;
+  --node-line-radius: 0.76rem 0.42rem 0.7rem 0.5rem / 0.48rem 0.78rem 0.46rem 0.74rem;
+  --node-icon: url("../icons/koboyo/cartoon-abstract-syntax-tree.svg");
+}
+
 .kb-home-node--engineering {
+  --node-line-x: 0.04rem;
+  --node-line-y: 0.07rem;
+  --node-line-rotate: 0.16deg;
+  --node-line-radius: 0.56rem 0.74rem 0.42rem 0.82rem / 0.74rem 0.48rem 0.68rem 0.52rem;
   --node-icon: url("../icons/koboyo/cartoon-build-step.svg");
 }
 
 .kb-home-node--ai {
+  --node-line-x: -0.04rem;
+  --node-line-y: -0.06rem;
+  --node-line-rotate: 0.3deg;
+  --node-line-radius: 0.7rem 0.5rem 0.8rem 0.44rem / 0.48rem 0.76rem 0.54rem 0.72rem;
   --node-icon: url("../icons/koboyo/cartoon-brain-circuit.svg");
 }
 
 .kb-home-node--projects {
+  --node-line-x: 0.08rem;
+  --node-line-y: 0.03rem;
+  --node-line-rotate: -0.24deg;
+  --node-line-radius: 0.44rem 0.82rem 0.52rem 0.72rem / 0.78rem 0.48rem 0.7rem 0.5rem;
   --node-surface: var(--color-node-neutral-paper);
   --node-border: var(--color-node-neutral-border);
   --node-mark-surface: var(--color-accent-soft);
@@ -52,6 +94,10 @@
 }
 
 .kb-home-node--blog {
+  --node-line-x: -0.07rem;
+  --node-line-y: -0.03rem;
+  --node-line-rotate: 0.2deg;
+  --node-line-radius: 0.74rem 0.46rem 0.68rem 0.56rem / 0.5rem 0.8rem 0.42rem 0.72rem;
   --node-icon: url("../icons/koboyo/cartoon-published-article.svg");
 }
 
@@ -68,6 +114,17 @@
   color: var(--color-ink);
   background: var(--node-mark-surface);
   line-height: 1;
+}
+
+.kb-home-node-mark::after {
+  position: absolute;
+  inset: -0.1rem -0.07rem -0.06rem -0.11rem;
+  border: 0.05rem solid var(--node-border);
+  border-radius: 0.5rem 0.7rem 0.46rem 0.64rem / 0.68rem 0.45rem 0.72rem 0.5rem;
+  content: "";
+  opacity: 0.42;
+  pointer-events: none;
+  transform: rotate(-1.6deg);
 }
 
 .kb-home-node-mark::before {

@@ -30,18 +30,38 @@ To be what you want to be !
   </figcaption>
   <div class="kb-home-canvas-board">
     <svg class="kb-home-canvas-paths" viewBox="0 0 620 470" aria-hidden="true">
-      <path d="M270 110 C222 136 166 162 124 210" />
-      <path d="M270 110 C362 116 442 146 500 205" />
-      <path d="M124 210 C118 296 168 354 230 390" />
-      <path d="M500 205 C516 292 502 340 480 380" />
-      <path class="kb-home-canvas-paths-accent" d="M270 110 C284 232 262 320 230 390" />
-      <path class="kb-home-canvas-paths-accent" d="M270 110 C352 222 428 308 480 380" />
+      <defs>
+        <filter id="kb-home-pencil-wobble" x="-8%" y="-8%" width="116%" height="116%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.018 0.08" numOctaves="1" seed="17" result="paper-noise" />
+          <feDisplacementMap in="SourceGraphic" in2="paper-noise" scale="1.7" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+      </defs>
+      <g class="kb-home-canvas-paths-echo">
+        <path d="M128 72 C119 138 139 174 127 233 C118 289 138 343 127 400" />
+        <path d="M492 73 C505 139 480 178 493 235 C505 292 480 346 494 399" />
+        <path class="kb-home-canvas-paths-accent" d="M145 91 C236 114 382 164 474 219" />
+        <path class="kb-home-canvas-paths-accent" d="M475 94 C390 118 271 155 150 218" />
+        <path d="M150 250 C238 281 356 330 470 386" />
+      </g>
+      <g class="kb-home-canvas-paths-main">
+        <path d="M128 72 C119 138 139 174 127 233 C118 289 138 343 127 400" />
+        <path d="M492 73 C505 139 480 178 493 235 C505 292 480 346 494 399" />
+        <path class="kb-home-canvas-paths-accent" d="M145 91 C236 114 382 164 474 219" />
+        <path class="kb-home-canvas-paths-accent" d="M475 94 C390 118 271 155 150 218" />
+        <path d="M150 250 C238 281 356 330 470 386" />
+      </g>
     </svg>
 
     <article class="kb-home-node kb-home-node--python">
       <span class="kb-home-node-mark" aria-hidden="true"></span>
       <a class="kb-home-node-title" href="python/">Python 知识 <b aria-hidden="true">↗</b></a>
       <small>理解语言核心、标准库与使用边界，建立稳定的技术主线。</small>
+    </article>
+
+    <article class="kb-home-node kb-home-node--fundamentals">
+      <span class="kb-home-node-mark" aria-hidden="true"></span>
+      <a class="kb-home-node-title" href="fundamentals/">算法与基础 <b aria-hidden="true">↗</b></a>
+      <small>梳理数据结构、算法与计算机基础，用实现和实验加深理解。</small>
     </article>
 
     <article class="kb-home-node kb-home-node--engineering">
