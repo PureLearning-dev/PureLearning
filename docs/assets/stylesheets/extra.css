@@ -638,7 +638,7 @@ pre {
 
   .kb-home-canvas-board {
     display: grid;
-    height: 30rem;
+    height: 29rem;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: repeat(3, auto);
     gap: var(--space-3) var(--space-6);
@@ -694,7 +694,7 @@ pre {
     position: relative;
     inset: auto;
     width: 100%;
-    max-width: 13.5rem;
+    max-width: 14.5rem;
   }
 
   .kb-home-node--python {

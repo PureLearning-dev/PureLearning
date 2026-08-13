@@ -96,7 +96,7 @@ To be what you want to be !
 
 <div class="kb-home-section-head" markdown>
 
-## 知识如何形成
+## Learn by doing !
 
 这里不只收集资料。知识从真实问题、代码实验和项目实践中形成，经过提炼后回到项目，再在新的条件下接受复查。
 

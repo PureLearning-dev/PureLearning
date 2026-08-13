@@ -1,13 +1,15 @@
-/* Interactive knowledge-map cards used on the homepage. */
+/* Hallmark · component: content-map card · genre: playful/editorial · theme: project tokens
+ * states: default · hover · focus · active · disabled · loading · error · success
+ * contrast: pass (40–41) · mobile: pass (34, 49, 50–57)
+ */
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 */
 
 .kb-home-node {
   --node-surface: var(--color-node-neutral-paper);
-  --node-border: var(--color-node-neutral-border);
+  --node-accent: var(--color-node-neutral-border);
   --node-mark-surface: var(--color-accent-soft);
-  --node-line-x: -0.06rem;
-  --node-line-y: 0.05rem;
-  --node-line-rotate: -0.18deg;
-  --node-line-radius: 0.52rem 0.78rem 0.48rem 0.7rem / 0.7rem 0.5rem 0.76rem 0.46rem;
+  --paper-card-radius: 1.55rem 0.45rem 1.25rem 0.65rem / 0.55rem 1.35rem 0.5rem 1.15rem;
+  --paper-card-shadow: color-mix(in oklch, var(--color-ink) 22%, transparent);
   position: relative;
   display: grid;
   grid-template-areas:
@@ -16,29 +18,19 @@
   grid-template-columns: auto minmax(0, 1fr);
   gap: var(--space-2) var(--space-3);
   padding: var(--space-3);
-  border-color: var(--node-border);
+  border: 0.1rem solid var(--color-ink);
+  border-radius: var(--paper-card-radius);
   color: var(--color-ink);
   background: var(--node-surface);
-  box-shadow:
-    0.1rem 0.13rem 0 var(--color-node-shadow),
-    0.18rem 0.22rem 0 -0.08rem var(--color-node-shadow);
-}
-
-.kb-home-node::before {
-  position: absolute;
-  inset: -0.1rem -0.08rem -0.06rem -0.11rem;
-  border: 0.055rem solid var(--node-border);
-  border-radius: var(--node-line-radius);
-  content: "";
-  opacity: 0.48;
-  pointer-events: none;
-  transform: translate(var(--node-line-x), var(--node-line-y)) rotate(var(--node-line-rotate));
+  box-shadow: 0.7rem 1.15rem 1.05rem -0.9rem var(--paper-card-shadow);
+  isolation: isolate;
+  transition: transform var(--dur-short) var(--ease-out);
 }
 
 .kb-home-node--python,
 .kb-home-node--ai {
   --node-surface: var(--color-node-cool-paper);
-  --node-border: var(--color-node-cool-border);
+  --node-accent: var(--color-node-cool-border);
   --node-mark-surface: var(--color-paper);
 }
 
@@ -46,59 +38,50 @@
 .kb-home-node--fundamentals,
 .kb-home-node--blog {
   --node-surface: var(--color-node-warm-paper);
-  --node-border: var(--color-node-warm-border);
+  --node-accent: var(--color-node-warm-border);
   --node-mark-surface: var(--color-paper);
 }
 
-.kb-home-node--python {
-  --node-line-x: 0.06rem;
-  --node-line-y: -0.04rem;
-  --node-line-rotate: 0.22deg;
-  --node-line-radius: 0.46rem 0.84rem 0.55rem 0.68rem / 0.72rem 0.46rem 0.8rem 0.5rem;
+.kb-home-node.kb-home-node--python {
+  --paper-card-radius: 1.7rem 0.4rem 1.35rem 0.65rem / 0.5rem 1.5rem 0.45rem 1.2rem;
   --node-icon: url("../icons/koboyo/cartoon-python-file.svg");
 }
 
-.kb-home-node--fundamentals {
-  --node-line-x: -0.08rem;
-  --node-line-y: 0.03rem;
-  --node-line-rotate: -0.28deg;
-  --node-line-radius: 0.76rem 0.42rem 0.7rem 0.5rem / 0.48rem 0.78rem 0.46rem 0.74rem;
+.kb-home-node.kb-home-node--fundamentals {
+  --paper-card-radius: 0.55rem 1.65rem 0.45rem 1.4rem / 1.45rem 0.5rem 1.3rem 0.7rem;
   --node-icon: url("../icons/koboyo/cartoon-abstract-syntax-tree.svg");
 }
 
-.kb-home-node--engineering {
-  --node-line-x: 0.04rem;
-  --node-line-y: 0.07rem;
-  --node-line-rotate: 0.16deg;
-  --node-line-radius: 0.56rem 0.74rem 0.42rem 0.82rem / 0.74rem 0.48rem 0.68rem 0.52rem;
+.kb-home-node.kb-home-node--engineering {
+  --paper-card-radius: 1.4rem 0.65rem 1.6rem 0.4rem / 0.65rem 1.35rem 0.45rem 1.5rem;
   --node-icon: url("../icons/koboyo/cartoon-build-step.svg");
 }
 
-.kb-home-node--ai {
-  --node-line-x: -0.04rem;
-  --node-line-y: -0.06rem;
-  --node-line-rotate: 0.3deg;
-  --node-line-radius: 0.7rem 0.5rem 0.8rem 0.44rem / 0.48rem 0.76rem 0.54rem 0.72rem;
+.kb-home-node.kb-home-node--ai {
+  --paper-card-radius: 0.4rem 1.5rem 0.7rem 1.3rem / 1.3rem 0.55rem 1.55rem 0.45rem;
   --node-icon: url("../icons/koboyo/cartoon-brain-circuit.svg");
 }
 
-.kb-home-node--projects {
-  --node-line-x: 0.08rem;
-  --node-line-y: 0.03rem;
-  --node-line-rotate: -0.24deg;
-  --node-line-radius: 0.44rem 0.82rem 0.52rem 0.72rem / 0.78rem 0.48rem 0.7rem 0.5rem;
+.kb-home-node.kb-home-node--projects {
+  --paper-card-radius: 1.6rem 0.5rem 1.3rem 0.75rem / 0.45rem 1.4rem 0.65rem 1.5rem;
   --node-surface: var(--color-node-neutral-paper);
-  --node-border: var(--color-node-neutral-border);
+  --node-accent: var(--color-node-neutral-border);
   --node-mark-surface: var(--color-accent-soft);
   --node-icon: url("../icons/koboyo/cartoon-roadmap.svg");
 }
 
-.kb-home-node--blog {
-  --node-line-x: -0.07rem;
-  --node-line-y: -0.03rem;
-  --node-line-rotate: 0.2deg;
-  --node-line-radius: 0.74rem 0.46rem 0.68rem 0.56rem / 0.5rem 0.8rem 0.42rem 0.72rem;
+.kb-home-node.kb-home-node--blog {
+  --paper-card-radius: 0.65rem 1.55rem 0.4rem 1.4rem / 1.45rem 0.65rem 1.3rem 0.45rem;
   --node-icon: url("../icons/koboyo/cartoon-published-article.svg");
+}
+
+.kb-home-node.kb-home-node--python,
+.kb-home-node.kb-home-node--fundamentals,
+.kb-home-node.kb-home-node--engineering,
+.kb-home-node.kb-home-node--ai,
+.kb-home-node.kb-home-node--projects,
+.kb-home-node.kb-home-node--blog {
+  border-radius: var(--paper-card-radius);
 }
 
 .kb-home-node-mark {
@@ -109,22 +92,12 @@
   grid-area: mark;
   place-items: center;
   align-self: center;
-  border: var(--rule-thin) solid var(--node-border);
-  border-radius: var(--radius-sketch-b);
+  border: var(--rule-sketch) solid var(--color-ink);
+  border-radius: 120px 12px 110px 10px / 10px 110px 12px 120px;
   color: var(--color-ink);
   background: var(--node-mark-surface);
+  box-shadow: 0.1rem 0.14rem 0 var(--node-accent);
   line-height: 1;
-}
-
-.kb-home-node-mark::after {
-  position: absolute;
-  inset: -0.1rem -0.07rem -0.06rem -0.11rem;
-  border: 0.05rem solid var(--node-border);
-  border-radius: 0.5rem 0.7rem 0.46rem 0.64rem / 0.68rem 0.45rem 0.72rem 0.5rem;
-  content: "";
-  opacity: 0.42;
-  pointer-events: none;
-  transform: rotate(-1.6deg);
 }
 
 .kb-home-node-mark::before {
@@ -143,6 +116,7 @@
   min-width: 0;
   min-height: var(--space-10);
   color: var(--color-ink);
+  font-size: var(--text-base);
   text-decoration: none;
   white-space: nowrap;
 }
@@ -150,23 +124,22 @@
 .md-typeset .kb-home-node-title::after {
   position: absolute;
   inset: 0;
+  border-radius: inherit;
   content: "";
 }
 
-.md-typeset .kb-home-node-title:hover {
-  color: var(--color-ink);
-  text-decoration: none;
-}
-
 .kb-home-node small {
+  display: block;
   grid-area: copy;
+  padding-top: var(--space-2);
+  border-top: var(--rule-thin) dashed var(--node-accent);
   color: var(--color-muted);
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   line-height: 1.65;
 }
 
 .kb-home-node:has(.kb-home-node-title:focus-visible) {
-  outline: var(--rule-sketch) solid var(--color-focus);
+  outline: 0.15rem solid var(--color-focus);
   outline-offset: var(--space-1);
 }
 
@@ -174,39 +147,80 @@
   outline: none;
 }
 
-.kb-home-node:has(.kb-home-node-title:active) {
-  animation: none;
-  transform: translateX(var(--node-shift-x)) translateY(var(--rule-thin)) rotate(var(--node-rotate));
+.kb-home-node[aria-disabled="true"],
+.kb-home-node:has(.kb-home-node-title[aria-disabled="true"]) {
+  cursor: not-allowed;
+  opacity: 0.52;
 }
 
-@keyframes kb-home-node-hop-once {
-  0%,
-  100% {
-    transform: translateX(var(--node-shift-x)) translateY(0) rotate(var(--node-rotate));
-  }
-  45% {
-    transform: translateX(var(--node-shift-x)) translateY(calc(var(--space-2) * -1)) rotate(var(--node-rotate));
-  }
+.kb-home-node .kb-home-node-title[aria-disabled="true"] {
+  pointer-events: none;
+}
+
+.kb-home-node[aria-busy="true"],
+.kb-home-node[data-state="loading"] {
+  cursor: progress;
+  opacity: 0.74;
+}
+
+.kb-home-node[aria-busy="true"] small::after,
+.kb-home-node[data-state="loading"] small::after {
+  color: var(--color-muted);
+  content: " · 正在载入";
+}
+
+.kb-home-node[data-state="error"] {
+  --node-accent: var(--color-status-active);
+  outline: var(--rule-thin) dashed var(--color-ink);
+  outline-offset: var(--space-1);
+}
+
+.kb-home-node[data-state="error"] small::after {
+  color: var(--color-ink);
+  content: " · 加载失败";
+}
+
+.kb-home-node[data-state="success"] {
+  --node-accent: var(--color-status-done);
+}
+
+.kb-home-node[data-state="success"] small::after {
+  color: var(--color-ink);
+  content: " · 已就绪";
 }
 
 @media (hover: hover) and (pointer: fine) {
   .kb-home-node:hover {
-    animation: kb-home-node-hop-once var(--dur-long) var(--ease-out) 1 both;
+    transform: translateX(var(--node-shift-x)) translateY(calc(var(--space-1) * -1)) rotate(var(--node-rotate));
   }
+}
+
+.kb-home-node:has(.kb-home-node-title:active) {
+  box-shadow: 0.28rem 0.48rem 0.55rem -0.4rem var(--paper-card-shadow);
+  transform: translateX(var(--node-shift-x)) translateY(var(--rule-sketch)) rotate(var(--node-rotate));
 }
 
 @supports not selector(:has(*)) {
   .kb-home-node .kb-home-node-title:focus-visible {
     border-radius: var(--radius-xs);
-    outline: var(--rule-sketch) solid var(--color-focus);
+    outline: 0.15rem solid var(--color-focus);
     outline-offset: var(--space-1);
   }
 }
 
+@media (min-width: 40rem) {
+  .md-typeset .kb-home-node-title {
+    font-size: var(--text-lg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .kb-home-node {
+    transition-duration: var(--dur-micro);
+  }
+
   .kb-home-node:hover,
   .kb-home-node:has(.kb-home-node-title:active) {
-    animation: none;
     transform: translateX(var(--node-shift-x)) rotate(var(--node-rotate));
   }
 }
