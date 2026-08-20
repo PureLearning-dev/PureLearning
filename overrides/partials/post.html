@@ -1,0 +1,71 @@
+{# A compact, text-first excerpt for the blog index. #}
+<article class="md-post md-post--excerpt kb-blog-entry">
+  <header class="kb-blog-entry__date">
+    <time datetime="{{ post.config.date.created.isoformat() }}">
+      <span class="kb-blog-entry__day">
+        {{- post.config.date.created.strftime("%m.%d") -}}
+      </span>
+      <span class="kb-blog-entry__year">
+        {{- post.config.date.created.strftime("%Y") -}}
+      </span>
+    </time>
+    {% if post.config.pin %}
+      <span class="kb-blog-entry__state">置顶</span>
+    {% endif %}
+    {% if post.config.draft %}
+      <span class="kb-blog-entry__state">草稿</span>
+    {% endif %}
+  </header>
+
+  <div class="kb-blog-entry__main">
+    <div class="md-post__content md-typeset kb-blog-entry__content">
+      {{ post.content }}
+    </div>
+
+    <footer class="kb-blog-entry__footer">
+      <ul class="kb-blog-entry__meta" aria-label="文章元数据">
+        {% if post.authors %}
+          <li class="kb-blog-entry__authors">
+            {% for author in post.authors %}
+              {% if author.url %}
+                <a class="kb-blog-entry__author" href="{{ author.url | url }}" title="{{ author.description }}">
+                  <img src="{{ author.avatar | url }}" alt="">
+                  <span>{{ author.name }}</span>
+                </a>
+              {% else %}
+                <span class="kb-blog-entry__author" title="{{ author.description }}">
+                  <img src="{{ author.avatar | url }}" alt="">
+                  <span>{{ author.name }}</span>
+                </span>
+              {% endif %}
+              {%- if loop.revindex > 1 %}<span aria-hidden="true">、</span>{% endif -%}
+            {% endfor %}
+          </li>
+        {% endif %}
+
+        {% if post.categories %}
+          <li>
+            {% for category in post.categories %}
+              <a href="{{ category.url | url }}">{{ category.title }}</a>
+              {%- if loop.revindex > 1 %}, {% endif -%}
+            {% endfor %}
+          </li>
+        {% endif %}
+
+        {% if post.config.readtime %}
+          <li>{{ post.config.readtime }} min read</li>
+        {% endif %}
+
+        {% if post.meta.word_count %}
+          <li>{{ post.meta.word_count }} words</li>
+        {% endif %}
+      </ul>
+
+      {% if post.more %}
+        <a class="kb-blog-entry__read" href="{{ post.url | url }}" aria-label="阅读全文：{{ post.post.title | e }}">
+          阅读全文 <span aria-hidden="true">→</span>
+        </a>
+      {% endif %}
+    </footer>
+  </div>
+</article>

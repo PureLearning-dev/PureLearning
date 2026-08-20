@@ -6,8 +6,9 @@
 {% include "partials/actions.html" %}
 
 {% if is_blog_post %}
+<div class="kb-blog-post">
   <nav class="kb-blog-post-back" aria-label="博客导航">
-    <a class="kb-blog-post-back__link" href="{{ page.parent.url | url }}">
+    <a class="kb-blog-post-back__link" href="{{ 'blog/' | url }}">
       <span class="kb-blog-post-back__icon" aria-hidden="true">
         {% include ".icons/material/arrow-left.svg" %}
       </span>
@@ -18,9 +19,9 @@
 
 {% if is_blog_post %}
   {% set post_meta %}
-    <div class="kb-blog-post-meta" aria-label="文章元数据">
+    <ul class="kb-blog-post-meta" aria-label="文章元数据">
       {% if page.authors %}
-        <span class="kb-blog-post-meta__item kb-blog-post-meta__authors">
+        <li class="kb-blog-post-meta__item kb-blog-post-meta__authors">
           {% for author in page.authors %}
             {% if author.url %}
               <a class="kb-blog-post-meta__author" href="{{ author.url | url }}" title="{{ author.description }}">
@@ -35,15 +36,17 @@
             {% endif %}
             {%- if loop.revindex > 1 %}<span aria-hidden="true">、</span>{% endif -%}
           {% endfor %}
-        </span>
+        </li>
       {% endif %}
-      <time
-        class="kb-blog-post-meta__item"
-        datetime="{{ page.config.date.created }}"
-        aria-label="发布于 {{ page.config.date.created | date }}"
-        title="发布于 {{ page.config.date.created | date }}"
-      >
-        {{- page.config.date.created.strftime("%B %d, %Y") | replace(" 0", " ") -}}
+
+      <li class="kb-blog-post-meta__item">
+        <time
+          datetime="{{ page.config.date.created.isoformat() }}"
+          aria-label="发布于 {{ page.config.date.created | date }}"
+          title="发布于 {{ page.config.date.created | date }}"
+        >
+          {{- page.config.date.created.strftime("%B %d, %Y") | replace(" 0", " ") -}}
+        </time>
         {% if page.categories %}
           <span aria-hidden="true"> in </span>
           {% for category in page.categories %}
@@ -51,29 +54,33 @@
             {%- if loop.revindex > 1 %}, {% endif -%}
           {% endfor %}
         {% endif %}
-      </time>
+      </li>
+
       {% if page.config.date.updated %}
-        <time
-          class="kb-blog-post-meta__item"
-          datetime="{{ page.config.date.updated }}"
-          aria-label="更新于 {{ page.config.date.updated | date }}"
-          title="更新于 {{ page.config.date.updated | date }}"
-        >
-          更新 {{ page.config.date.updated.strftime("%Y-%m-%d") }}
-        </time>
+        <li class="kb-blog-post-meta__item">
+          <time
+            datetime="{{ page.config.date.updated.isoformat() }}"
+            aria-label="更新于 {{ page.config.date.updated | date }}"
+            title="更新于 {{ page.config.date.updated | date }}"
+          >
+            Updated {{ page.config.date.updated.strftime("%B %d, %Y") | replace(" 0", " ") }}
+          </time>
+        </li>
       {% endif %}
+
       {% if page.config.readtime %}
         {% set time = page.config.readtime %}
-        <span class="kb-blog-post-meta__item" aria-label="预计阅读时间 {{ time }} 分钟" title="预计阅读时间">
+        <li class="kb-blog-post-meta__item" aria-label="预计阅读时间 {{ time }} 分钟" title="预计阅读时间">
           {{ time }} min read
-        </span>
+        </li>
       {% endif %}
+
       {% if page.meta.word_count %}
-        <span class="kb-blog-post-meta__item" aria-label="正文约 {{ page.meta.word_count }} 字" title="正文字数">
+        <li class="kb-blog-post-meta__item" aria-label="正文约 {{ page.meta.word_count }} 字" title="正文字数">
           {{ page.meta.word_count }} words
-        </span>
+        </li>
       {% endif %}
-    </div>
+    </ul>
   {% endset %}
 {% endif %}
 
@@ -88,6 +95,7 @@
 {% endif %}
 {% if is_blog_post %}
   {% include "partials/blog-post-navigation.html" %}
+  </div>
 {% endif %}
 {% include "partials/source-file.html" %}
 {% include "partials/feedback.html" %}

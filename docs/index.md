@@ -13,12 +13,12 @@ hide:
 
 # 从知识学习，走向真实实践
 
-To be what you want to be !
+天行健，君子以自强不息！
 
 <div class="kb-home-actions" markdown>
 
 [开始学习](python/index.md){ .kb-home-action .kb-home-action--primary }
-[浏览项目与经验](projects/index.md){ .kb-home-action .kb-home-action--secondary }
+[立刻动手](projects/index.md){ .kb-home-action .kb-home-action--secondary }
 
 </div>
 
@@ -55,37 +55,37 @@ To be what you want to be !
     <article class="kb-home-node kb-home-node--python">
       <span class="kb-home-node-mark" aria-hidden="true"></span>
       <a class="kb-home-node-title" href="python/">Python 知识 <b aria-hidden="true">↗</b></a>
-      <small>理解语言核心、标准库与使用边界，建立稳定的技术主线。</small>
+      <small>掌握一门现代化的编程语言是一个明智的投资</small>
     </article>
 
     <article class="kb-home-node kb-home-node--fundamentals">
       <span class="kb-home-node-mark" aria-hidden="true"></span>
       <a class="kb-home-node-title" href="fundamentals/">算法与基础 <b aria-hidden="true">↗</b></a>
-      <small>梳理数据结构、算法与计算机基础，用实现和实验加深理解。</small>
+      <small>千里之行，始于足下</small>
     </article>
 
     <article class="kb-home-node kb-home-node--engineering">
       <span class="kb-home-node-mark" aria-hidden="true"></span>
       <a class="kb-home-node-title" href="engineering/">工程实践 <b aria-hidden="true">↗</b></a>
-      <small>用测试、类型、日志、依赖与部署，让代码可以长期演进。</small>
+      <small>真理只被实践检验</small>
     </article>
 
     <article class="kb-home-node kb-home-node--ai">
       <span class="kb-home-node-mark" aria-hidden="true"></span>
       <a class="kb-home-node-title" href="ai/">AI 探索 <b aria-hidden="true">↗</b></a>
-      <small>通过机器学习、PyTorch 与生成式 AI 实验连接理论和应用。</small>
+      <small>人类的未来十分可能就在其中，你难道能抑制住自己的好奇心吗</small>
     </article>
 
     <article class="kb-home-node kb-home-node--projects">
       <span class="kb-home-node-mark" aria-hidden="true"></span>
       <a class="kb-home-node-title" href="projects/">项目档案 <b aria-hidden="true">↗</b></a>
-      <small>保存目标、设计、技术决策、故障排查、里程碑与复盘。</small>
+      <small>不断进步的证明</small>
     </article>
 
     <article class="kb-home-node kb-home-node--blog">
       <span class="kb-home-node-mark" aria-hidden="true"></span>
       <a class="kb-home-node-title" href="blog/">博客 <b aria-hidden="true">↗</b></a>
-      <small>按主题与时间汇集文章、学习记录和项目进展，追踪认识变化。</small>
+      <small>岁岁年年人不同</small>
     </article>
   </div>
 </figure>
@@ -157,7 +157,7 @@ To be what you want to be !
     1. 从站内搜索输入现象、库名、异常或任务关键词。
     2. 在[代码速查](engineering/snippets.md)寻找短小、已验证的实现。
     3. 在[工程实践](engineering/index.md)理解做法适用的条件。
-    4. 到[日志](logs/index.md)和[项目档案](projects/index.md)查看完整上下文。
+    4. 到[博客](blog/index.md)和[项目档案](projects/index.md)查看完整上下文。
 
 </section>
 
@@ -173,7 +173,7 @@ To be what you want to be !
 
 [项目实践 →](projects/index.md){ .kb-home-text-link }
 [工程实践 →](engineering/index.md){ .kb-home-text-link }
-[学习日志 →](logs/index.md){ .kb-home-text-link }
+[博客文章 →](blog/index.md){ .kb-home-text-link }
 
 </div>
 
@@ -216,7 +216,7 @@ To be what you want to be !
 
 沿时间变化的学习现场、项目记录与网站调整。
 
-- `2026-08-08` [为什么建立这份 Python 学习记录](blog/posts/2026-8/2026-08-08-site-initialized.md)
+- `2026-08-08` [内容变多以后，为什么不把导航都写进 mkdocs.yml](blog/posts/2026-8/2026-08-08-awesome-nav.md)
 - `2026-08-08` [Python 学习手册：内容框架搭建](projects/index.md)
 - `2026-08-08` [网站结构与导航调整](about/changelog.md)
 

@@ -31,6 +31,8 @@
   --font-body: "Maple Mono NF CN", ui-monospace, monospace;
   --font-code: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas,
     "Liberation Mono", monospace;
+  --font-blog: "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC",
+    SimSun, serif;
   --font-sketch: "Excalifont", "Xiaolai", "Maple Mono NF CN", cursive;
 
   --color-paper: oklch(99.2% 0.006 275);
@@ -38,7 +40,7 @@
   --color-surface: oklch(96.5% 0.012 275);
   --color-ink: oklch(23% 0.02 275);
   --color-muted: oklch(48% 0.026 275);
-  --color-faint: oklch(58% 0.022 275);
+  --color-faint: oklch(56% 0.022 275);
   --color-rule: oklch(86% 0.018 275);
   --color-rule-strong: oklch(70% 0.045 275);
   --color-pencil: oklch(61% 0.055 275);
@@ -78,8 +80,15 @@
   --text-reading: 1rem;
   --text-blog-title: clamp(1.2rem, 1vw + 1rem, 1.6rem);
   --text-blog-lead-title: clamp(1.55rem, 1.5vw + 1rem, 1.9rem);
+  --text-blog-reading: 0.9rem;
+  --text-blog-index-title: clamp(1.06rem, 0.55vw + 0.96rem, 1.3rem);
+  --text-blog-display: clamp(1.4rem, 1.6vw, 1.6rem);
   --text-section: clamp(1.45rem, 2.4vw, 2rem);
   --text-display: clamp(2.05rem, 4.4vw, 3.1rem);
+
+  --width-blog-post: 48rem;
+  --measure-blog-title: 20em;
+  --measure-blog-prose: 44em;
 
   --radius-xs: 0.15rem;
   --radius-sm: 0.35rem;
@@ -87,6 +96,7 @@
   --radius-sketch-b: 0.7rem 0.4rem 0.75rem 0.45rem;
   --rule-thin: 0.05rem;
   --rule-sketch: 0.075rem;
+  --rule-focus: 0.125rem;
   --underline-offset: 0.14rem;
   --dur-micro: 120ms;
   --dur-short: 220ms;

@@ -4,16 +4,21 @@
   <div class="md-content" data-md-component="content">
     <div class="md-content__inner kb-blog-index">
       <header class="md-typeset kb-blog-index__intro">
+        <p class="kb-blog-index__eyebrow">Writing archive</p>
+        <h1>{{ page.title }}</h1>
+        {% if page.meta.description %}
+          <p>{{ page.meta.description }}</p>
+        {% endif %}
         {{ page.content }}
       </header>
 
-      <section class="kb-blog-index__posts" aria-label="博客文章">
+      <ol class="kb-blog-index__posts" aria-label="博客文章">
         {% for post in posts %}
-          <div class="kb-blog-index__entry{% if loop.first %} kb-blog-index__entry--lead{% endif %}">
+          <li class="kb-blog-index__entry">
             {% include "partials/post.html" %}
-          </div>
+          </li>
         {% endfor %}
-      </section>
+      </ol>
 
       {% if pagination %}
         {% block pagination %}
