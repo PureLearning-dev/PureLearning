@@ -126,36 +126,36 @@ hide:
 
 === "学 Python"
 
-    1. 从[基础与语言核心](python/python-core.md)理解 Python 的表达方式。
-    2. 根据真实任务查阅[标准库](python/standard-library.md)。
+    1. 从基础与语言核心理解 Python 的表达方式。
+    2. 根据真实任务查阅标准库。
     3. 进入[工程实践](engineering/index.md)，让代码可测试、可维护。
     4. 选择一个[项目](projects/index.md)验证所学内容。
 
 === "建项目"
 
-    1. 使用[项目记录模板](projects/project-template.md)明确问题、目标与范围。
+    1. 使用项目记录模板明确问题、目标与范围。
     2. 在[项目档案](projects/index.md)中记录方案、决策和里程碑。
-    3. 从[代码速查](engineering/snippets.md)复用已经验证的模式。
+    3. 从代码速查复用已经验证的模式。
     4. 完成阶段目标后写下故障、结果与复盘。
 
 === "提升工程"
 
     1. 查看[工程能力地图](engineering/index.md)，确定当前短板。
-    2. 用[Python 工程化](engineering/python-engineering.md)补齐类型、测试与日志。
+    2. 用 Python 工程化补齐类型、测试与日志。
     3. 在项目中验证依赖、交付和维护方式。
-    4. 把稳定做法整理到[代码速查](engineering/snippets.md)。
+    4. 把稳定做法整理到代码速查。
 
 === "做 AI 应用"
 
     1. 确认 Python、数据处理和调试能力足以支撑实验。
-    2. 学习[数学与机器学习基础](ai/fundamentals.md)。
-    3. 通过[神经网络](ai/neural-networks.md)与[PyTorch 实验](ai/pytorch-and-experiments.md)验证理解。
-    4. 再进入[AI 应用](ai/ai-applications.md)，连接模型与实际场景。
+    2. 学习数学与机器学习基础。
+    3. 通过神经网络与 PyTorch 实验验证理解。
+    4. 再进入 AI 应用，连接模型与实际场景。
 
 === "查经验"
 
     1. 从站内搜索输入现象、库名、异常或任务关键词。
-    2. 在[代码速查](engineering/snippets.md)寻找短小、已验证的实现。
+    2. 在代码速查寻找短小、已验证的实现。
     3. 在[工程实践](engineering/index.md)理解做法适用的条件。
     4. 到[博客](blog/index.md)和[项目档案](projects/index.md)查看完整上下文。
 
@@ -216,7 +216,7 @@ hide:
 
 沿时间变化的学习现场、项目记录与网站调整。
 
-- `2026-08-08` [内容变多以后，为什么不把导航都写进 mkdocs.yml](blog/posts/2026-8/2026-08-08-awesome-nav.md)
+- `2026-08-08` 内容变多以后，为什么不把导航都写进 mkdocs.yml
 - `2026-08-08` [Python 学习手册：内容框架搭建](projects/index.md)
 - `2026-08-08` [网站结构与导航调整](about/changelog.md)
 
@@ -229,8 +229,8 @@ hide:
 较稳定的内容入口和网站使用说明。
 
 - [Python 学习总览](python/index.md)
-- [项目记录模板](projects/project-template.md)
-- [内容如何组织与写作](about/content-and-writing.md)
+- 项目记录模板
+- 内容如何组织与写作
 - [网站路线图](about/roadmap.md)
 
 </div>
