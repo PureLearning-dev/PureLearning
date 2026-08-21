@@ -1,29 +1,84 @@
-/* Hallmark · component: content-map card · genre: playful/editorial · theme: project tokens
- * states: default · hover · focus · active · disabled · loading · error · success
- * contrast: pass (40–41) · mobile: pass (34, 49, 50–57)
- */
-/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 */
+/* Homepage content map. */
+.md-typeset .kb-home-canvas {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  margin: 0;
+  justify-self: stretch;
+}
+
+.kb-home-canvas figcaption {
+  display: grid;
+  width: 100%;
+  gap: var(--space-1);
+  margin: 0 0 var(--space-3);
+  color: var(--color-muted);
+  font-family: var(--font-sketch);
+  font-size: var(--text-sm);
+  font-synthesis: none;
+  line-height: 1.55;
+  text-align: start;
+}
+
+.kb-home-canvas figcaption strong {
+  color: var(--color-ink);
+  font-size: var(--text-lg);
+  font-weight: 400;
+}
+
+.kb-home-canvas-board {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: var(--rule-thin) dashed var(--color-rule-strong);
+  border-radius: var(--radius-sketch-a);
+  background-color: var(--color-canvas);
+  background-image: radial-gradient(
+    circle,
+    var(--color-grid-dot) var(--rule-thin),
+    transparent var(--rule-sketch)
+  );
+  background-size: var(--space-4) var(--space-4);
+}
+
+.kb-home-canvas-paths {
+  display: none;
+}
 
 .kb-home-node {
   --node-surface: var(--color-node-neutral-paper);
   --node-accent: var(--color-node-neutral-border);
   --node-mark-surface: var(--color-accent-soft);
+  --node-rotate: 0deg;
+  --node-shift-x: 0%;
   --paper-card-radius: 1.55rem 0.45rem 1.25rem 0.65rem / 0.55rem 1.35rem 0.5rem 1.15rem;
   --paper-card-shadow: color-mix(in oklch, var(--color-ink) 22%, transparent);
   position: relative;
+  z-index: 1;
+  box-sizing: border-box;
   display: grid;
+  width: 94%;
+  max-width: 24rem;
+  min-width: 0;
   grid-template-areas:
     "mark title"
     "copy copy";
   grid-template-columns: auto minmax(0, 1fr);
   gap: var(--space-2) var(--space-3);
+  margin: 0;
   padding: var(--space-3);
   border: 0.1rem solid var(--color-ink);
   border-radius: var(--paper-card-radius);
   color: var(--color-ink);
   background: var(--node-surface);
   box-shadow: 0.7rem 1.15rem 1.05rem -0.9rem var(--paper-card-shadow);
+  font-family: var(--font-sketch);
+  font-synthesis: none;
   isolation: isolate;
+  transform: translateX(var(--node-shift-x)) rotate(var(--node-rotate));
+  transform-origin: 48% 52%;
   transition: transform var(--dur-short) var(--ease-out);
 }
 
@@ -43,45 +98,53 @@
 }
 
 .kb-home-node.kb-home-node--python {
+  --node-rotate: -0.8deg;
   --paper-card-radius: 1.7rem 0.4rem 1.35rem 0.65rem / 0.5rem 1.5rem 0.45rem 1.2rem;
   --node-icon: url("../icons/koboyo/cartoon-python-file.svg");
+  justify-self: start;
 }
 
 .kb-home-node.kb-home-node--fundamentals {
+  --node-rotate: 0.7deg;
   --paper-card-radius: 0.55rem 1.65rem 0.45rem 1.4rem / 1.45rem 0.5rem 1.3rem 0.7rem;
   --node-icon: url("../icons/koboyo/cartoon-abstract-syntax-tree.svg");
+  width: 91%;
+  justify-self: end;
 }
 
 .kb-home-node.kb-home-node--engineering {
+  --node-rotate: 0.65deg;
   --paper-card-radius: 1.4rem 0.65rem 1.6rem 0.4rem / 0.65rem 1.35rem 0.45rem 1.5rem;
   --node-icon: url("../icons/koboyo/cartoon-build-step.svg");
+  width: 90%;
+  justify-self: start;
 }
 
 .kb-home-node.kb-home-node--ai {
+  --node-rotate: -0.55deg;
   --paper-card-radius: 0.4rem 1.5rem 0.7rem 1.3rem / 1.3rem 0.55rem 1.55rem 0.45rem;
   --node-icon: url("../icons/koboyo/cartoon-brain-circuit.svg");
+  width: 92%;
+  justify-self: end;
 }
 
 .kb-home-node.kb-home-node--projects {
+  --node-rotate: 0.75deg;
   --paper-card-radius: 1.6rem 0.5rem 1.3rem 0.75rem / 0.45rem 1.4rem 0.65rem 1.5rem;
   --node-surface: var(--color-node-neutral-paper);
   --node-accent: var(--color-node-neutral-border);
   --node-mark-surface: var(--color-accent-soft);
   --node-icon: url("../icons/koboyo/cartoon-roadmap.svg");
+  width: 95%;
+  justify-self: start;
 }
 
 .kb-home-node.kb-home-node--blog {
+  --node-rotate: -0.65deg;
   --paper-card-radius: 0.65rem 1.55rem 0.4rem 1.4rem / 1.45rem 0.65rem 1.3rem 0.45rem;
   --node-icon: url("../icons/koboyo/cartoon-published-article.svg");
-}
-
-.kb-home-node.kb-home-node--python,
-.kb-home-node.kb-home-node--fundamentals,
-.kb-home-node.kb-home-node--engineering,
-.kb-home-node.kb-home-node--ai,
-.kb-home-node.kb-home-node--projects,
-.kb-home-node.kb-home-node--blog {
-  border-radius: var(--paper-card-radius);
+  width: 89%;
+  justify-self: end;
 }
 
 .kb-home-node-mark {
@@ -128,6 +191,11 @@
   content: "";
 }
 
+.kb-home-node-title b {
+  color: var(--color-accent);
+  font-weight: 400;
+}
+
 .kb-home-node small {
   display: block;
   grid-area: copy;
@@ -139,7 +207,7 @@
 }
 
 .kb-home-node:has(.kb-home-node-title:focus-visible) {
-  outline: 0.15rem solid var(--color-focus);
+  outline: var(--rule-focus) solid var(--color-focus);
   outline-offset: var(--space-1);
 }
 
@@ -189,12 +257,6 @@
   content: " · 已就绪";
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .kb-home-node:hover {
-    transform: translateX(var(--node-shift-x)) translateY(calc(var(--space-1) * -1)) rotate(var(--node-rotate));
-  }
-}
-
 .kb-home-node:has(.kb-home-node-title:active) {
   box-shadow: 0.28rem 0.48rem 0.55rem -0.4rem var(--paper-card-shadow);
   transform: translateX(var(--node-shift-x)) translateY(var(--rule-sketch)) rotate(var(--node-rotate));
@@ -203,7 +265,7 @@
 @supports not selector(:has(*)) {
   .kb-home-node .kb-home-node-title:focus-visible {
     border-radius: var(--radius-xs);
-    outline: 0.15rem solid var(--color-focus);
+    outline: var(--rule-focus) solid var(--color-focus);
     outline-offset: var(--space-1);
   }
 }
@@ -211,6 +273,118 @@
 @media (min-width: 40rem) {
   .md-typeset .kb-home-node-title {
     font-size: var(--text-lg);
+  }
+}
+
+@media (min-width: 60rem) {
+  .kb-home-canvas-board {
+    height: 29rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(3, auto);
+    gap: var(--space-3) var(--space-6);
+    align-content: space-between;
+    padding: var(--space-4) var(--space-5);
+    overflow: clip;
+  }
+
+  .kb-home-canvas-paths {
+    position: absolute;
+    inset: var(--space-3);
+    display: block;
+    width: calc(100% - var(--space-6));
+    height: calc(100% - var(--space-6));
+    color: var(--color-pencil);
+    overflow: visible;
+  }
+
+  .kb-home-canvas-paths path {
+    fill: none;
+    stroke: currentcolor;
+    stroke-width: 1.35;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 25 2 1.5 3;
+    opacity: 0.66;
+    filter: url("#kb-home-pencil-wobble");
+    vector-effect: non-scaling-stroke;
+  }
+
+  .kb-home-canvas-paths-main path:nth-child(even) {
+    stroke-width: 1.55;
+    stroke-dasharray: 20 2.5 1 3.5;
+  }
+
+  .kb-home-canvas-paths .kb-home-canvas-paths-accent {
+    color: var(--color-accent);
+    stroke-dasharray: 14 2 1 4;
+    opacity: 0.58;
+  }
+
+  .kb-home-canvas-paths-echo {
+    opacity: 0.34;
+    transform: translate(1.2px, -0.8px);
+  }
+
+  .kb-home-canvas-paths-echo path {
+    stroke-width: 0.75;
+    stroke-dasharray: 18 5 2 4;
+  }
+
+  .kb-home-node {
+    width: 100%;
+    max-width: 14.5rem;
+  }
+
+  .kb-home-node.kb-home-node--python {
+    --node-rotate: -2.4deg;
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .kb-home-node.kb-home-node--fundamentals {
+    --node-rotate: 2.3deg;
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .kb-home-node.kb-home-node--engineering {
+    --node-rotate: 1.8deg;
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .kb-home-node.kb-home-node--ai {
+    --node-rotate: -2.1deg;
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  .kb-home-node.kb-home-node--projects {
+    --node-rotate: -1.6deg;
+    grid-row: 3;
+    grid-column: 1;
+  }
+
+  .kb-home-node.kb-home-node--blog {
+    --node-rotate: 2.5deg;
+    grid-row: 3;
+    grid-column: 2;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .kb-home-node:hover {
+    transform: translateX(var(--node-shift-x)) translateY(calc(var(--space-1) * -1)) rotate(var(--node-rotate));
+  }
+
+  .md-typeset .kb-home-node-title:hover {
+    color: var(--color-accent);
+  }
+}
+
+@media (pointer: coarse) {
+  .kb-home-node-title {
+    min-height: 3rem;
   }
 }
 
