@@ -1,9 +1,9 @@
 site_name: PureLearning
 site_description: Python、项目实践与人工智能学习笔记和持续更新日志
 site_author: Pure Learning
-site_url: https://purelearning-dev.github.io/PythonGuide/
-repo_url: https://github.com/PureLearning-dev/PythonGuide
-repo_name: PureLearning-dev/PythonGuide
+site_url: https://purelearning-dev.github.io/PureLearning/
+repo_url: https://github.com/PureLearning-dev/PureLearning
+repo_name: PureLearning-dev/PureLearning
 edit_uri: edit/main/docs/
 copyright: Copyright &copy; 2026 - 2026 Pure Learning
 
