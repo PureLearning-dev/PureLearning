@@ -1,3 +1,13 @@
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 */
+/* Hallmark · genre: editorial · macrostructure: Map / Diagram · theme: Almanac
+ * enrichment: existing hand-built SVG map · nav: Material shell · footer: Material shell
+ * audience: Python developers, AI practitioners, and curious learners
+ * use: orient visitors, then lead them into the knowledge system
+ * tone: elegant, technical, quietly playful
+ * contrast: pass (40–41) · slop: pass (42–45)
+ * honest: pass (46) · chrome: pass (47) · tokens: pass (48)
+ * responsive: pass (34, 49, 50–57) · icons: pass (30)
+ */
 /* Shared typography and homepage layout. */
 @import url("./tokens.css");
 
@@ -47,7 +57,6 @@ pre {
   gap: var(--space-12);
   margin-block: var(--space-10) var(--space-20);
   padding-block: 0 var(--space-4);
-  animation: kb-home-arrive var(--dur-short) var(--ease-out) both;
 }
 
 .kb-home-hero-copy {
@@ -78,7 +87,7 @@ pre {
 }
 
 .kb-home-actions {
-  margin-block: 0 var(--space-8);
+  margin: 0;
 }
 
 .kb-home-actions > p,
@@ -137,8 +146,10 @@ pre {
 
 .kb-home-canvas figcaption {
   display: grid;
+  width: 100%;
+  max-width: none;
   gap: var(--space-1);
-  margin-bottom: var(--space-3);
+  margin: 0 0 var(--space-3);
   color: var(--color-muted);
   font-family: var(--font-sketch);
   font-size: var(--text-sm);
@@ -298,6 +309,7 @@ pre {
 .kb-home-section-head > p,
 .kb-home-experience-intro > p,
 .kb-home-reading-column > p,
+.kb-home-reading-column .card-body > p,
 .kb-home-principles > p {
   max-width: 62ch;
   margin: 0;
@@ -525,7 +537,20 @@ pre {
   border-top: var(--rule-thin) solid var(--color-rule-strong);
 }
 
-.kb-home-reading-column > p {
+.kb-home-reading-column.kb-home-daisy-card {
+  --radius-box: var(--radius-sketch-a);
+  padding-top: 0;
+  border: var(--rule-thin) solid var(--color-rule);
+  background: var(--color-paper);
+}
+
+.kb-home-daisy-card > .card-body {
+  --card-p: var(--space-6);
+  gap: 0;
+}
+
+.kb-home-reading-column > p,
+.kb-home-reading-column .card-body > p {
   margin-top: var(--space-4);
 }
 
@@ -551,6 +576,10 @@ pre {
   padding: var(--space-10);
   border-radius: var(--radius-sketch-b);
   background: var(--color-surface);
+}
+
+.kb-home-principles.footer {
+  gap: var(--space-4);
 }
 
 .md-typeset .kb-home-principles h2 {

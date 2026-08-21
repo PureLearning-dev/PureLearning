@@ -113,9 +113,14 @@ markdown_extensions:
   - pymdownx.tilde
 
 extra_css:
+  - https://cdn.jsdelivr.net/npm/daisyui@5.7.20/components/card.css
+  - https://cdn.jsdelivr.net/npm/daisyui@5.7.20/components/footer.css
   - assets/stylesheets/extra.css
   - assets/stylesheets/home-map.css
   - assets/stylesheets/blog.css
+
+extra_javascript:
+  - assets/javascripts/home-animation.mjs
 
 extra:
   generator: false

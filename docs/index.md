@@ -210,7 +210,9 @@ hide:
 
 <section class="kb-home-section kb-home-reading" markdown>
 
-<div class="kb-home-reading-column" markdown>
+<div class="kb-home-reading-column kb-home-daisy-card card" markdown>
+
+<div class="card-body" markdown>
 
 ## 最近更新
 
@@ -222,7 +224,11 @@ hide:
 
 </div>
 
-<div class="kb-home-reading-column" markdown>
+</div>
+
+<div class="kb-home-reading-column kb-home-daisy-card card" markdown>
+
+<div class="card-body" markdown>
 
 ## 推荐阅读
 
@@ -235,9 +241,11 @@ hide:
 
 </div>
 
+</div>
+
 </section>
 
-<footer class="kb-home-principles" markdown>
+<footer class="kb-home-principles footer footer-vertical" markdown>
 
 ## 理解，验证，实践，再回来修正。
 
