@@ -113,8 +113,6 @@ markdown_extensions:
   - pymdownx.tilde
 
 extra_css:
-  - https://cdn.jsdelivr.net/npm/daisyui@5.7.20/components/card.css
-  - https://cdn.jsdelivr.net/npm/daisyui@5.7.20/components/footer.css
   - assets/stylesheets/extra.css
   - assets/stylesheets/home-map.css
   - assets/stylesheets/blog.css
@@ -124,3 +122,13 @@ extra_javascript:
 
 extra:
   generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/
+      name: GitHub
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/
+      name: X
+    - icon: simple/bilibili
+      link: https://www.bilibili.com/
+      name: 哔哩哔哩
